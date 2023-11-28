@@ -57,6 +57,7 @@ class FileStorage:
             pass
 
     def delete(self, obj=None):
+        """deletes an object from the dictionary"""
         if obj is None:
             return
         index = "{}.{}".format(obj.__class__.__name__, obj.id)
