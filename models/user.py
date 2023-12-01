@@ -15,3 +15,4 @@ class User(BaseModel, Base):
     first_name = Column(String(128))
     last_name = Column(String(128))
     places = rel('Place', backref='user')
+    reviews = rel('Review', backref='user')
