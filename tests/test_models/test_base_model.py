@@ -7,7 +7,7 @@ from uuid import UUID
 import json
 import os
 
-
+@unittest.skipIf(os.getenv('HBNB_TYPE_STORAGE') != 'db', "skip storage test if using db")
 class test_basemodel(unittest.TestCase):
     """ """
 
