@@ -31,7 +31,7 @@ class DBStorage:
             from models.city import City
             from models.amenity import Amenity
             from models.review import Review
-            classes_list = [State, City, User]
+            classes_list = [State, City, User, Place]
             for class_i in classes_list:
                 class_name = class_i.__name__
                 for obj in self.__session.query(class_i).all():
