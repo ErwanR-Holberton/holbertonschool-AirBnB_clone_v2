@@ -13,12 +13,12 @@ class DBStorage:
     def __init__(self):
         """init msql db"""
         db_user = getenv('HBNB_MYSQL_USER')
-        db_password = getenv('HBNB_MYSQL_PWD')
+        db_pwd = getenv('HBNB_MYSQL_PWD')
         db_host = getenv('HBNB_MYSQL_HOST')
         db_name = getenv('HBNB_MYSQL_DB')
-        self.__engine = create_engine('mysql+mysqldb://{}:{}@{}/{}'
-                                    .format(db_user, db_password, db_host,
-                                            db_name), pool_pre_ping=True)
+        str = 'mysql+mysqldb://{}:{}@{}/{}'.format(db_user, db_pwd, db_host,
+                                                   db_name)
+        self.__engine = create_engine(str, pool_pre_ping=True)
         if getenv('HBNB_ENV') == 'test':
             Base.metadata.drop_all(self.__engine)
 
