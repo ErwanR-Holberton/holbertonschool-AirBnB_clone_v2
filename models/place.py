@@ -50,7 +50,7 @@ class Place(BaseModel, Base):
             from models.amenity import Amenity
             list = []
             for amen in storage.all(Amenity).values():
-                if amen.place_id == self.id:
+                if amen.place_amenities == self.id:
                     list.append(amen)
             return list
 
