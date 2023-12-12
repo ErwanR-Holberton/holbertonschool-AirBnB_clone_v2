@@ -64,3 +64,6 @@ class FileStorage:
         if index in self.__objects.keys():
             del self.__objects[index]
             self.save()
+
+    def close(self):
+        self.reload()
