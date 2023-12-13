@@ -16,7 +16,7 @@ def teardown_storage(something):
 @app.route("/states_list", strict_slashes=False)
 def states_list():
     """print all states in storage"""
-    state_list = storage.all(State)
+    state_list = storage.all(State).values()
     return render_template("7-states_list.html", all_states=state_list)
 
 

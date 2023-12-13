@@ -32,7 +32,7 @@
 					<h3>Amenities</h3>
 					<h4>Fake content</h4>
 					<ul class="popover">
-						{% for amenity in amenity_list %}
+						{% for amenity in amenity_list | sort(attribute="name") %}
 						<li>{{ amenity.name }}</li>
 						{% endfor %}
 					</ul>
