@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""flask app to return web pages depending on routes"""
 from flask import Flask
 
 app = Flask(__name__)
