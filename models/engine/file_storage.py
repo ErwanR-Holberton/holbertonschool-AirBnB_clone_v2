@@ -66,4 +66,5 @@ class FileStorage:
             self.save()
 
     def close(self):
+        """reload before close"""
         self.reload()
